@@ -60,4 +60,5 @@ document.addEventListener('DOMContentLoaded', function () {
       startAnimationsSequentially(itemsInThirdBlock);
     }
   });
+
 });

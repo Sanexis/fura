@@ -115,6 +115,11 @@ a, .hover {
         font-size: 4rem;
         max-width: 50rem;
       }
+
+      @media (max-width: $cos_bp) {
+        margin: 15rem 0 0 auto;
+      }
+
     }
 
     .description {
@@ -131,6 +136,10 @@ a, .hover {
         margin: 4rem 0 0 0;
         font-size: 3rem;
         max-width: 50rem;
+      }
+
+      @media (max-width: $cos_bp) {
+        margin: 4rem 0 0 0;
       }
     }
   }
@@ -509,6 +518,27 @@ a, .hover {
     bottom: 0;
   }
 
+}
+
+.map-block{
+  height: max-content;
+  background-color: #222;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  h2{
+    color: #50df9f;
+    font-size: 5.5rem;
+  }
+
+  p{
+    font-size: 2.1rem;
+    color: #bbb;
+  }
+}
+
+.ymaps-2-1-79-gototech{
+  display: none!important;
 }
 
 @import './blocks/header.scss';
