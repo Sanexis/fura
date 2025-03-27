@@ -1,0 +1,109 @@
+header {
+  background-color: rgba(1, 1, 7, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  user-select: none;
+  z-index: 10;
+
+  @media (max-width: $xl-bp) {
+    gap: 4rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 8rem;
+    
+    @media (max-width: $xl-bp) {
+      gap: 4rem;
+    }
+
+    .logo {
+      img {
+        height: 5.3rem;
+
+        @media (max-width: $xl-bp) {
+          height: 5.3rem;
+        }
+
+        @media (max-width: $sm-bp) {
+          height: 5rem;
+          width: 5rem;
+        }
+      }
+    }
+
+    .navigation {
+      ul {
+        display: flex;
+        gap: 4rem;
+      }
+
+      @media (max-width: $sm-bp) {
+        display: none;
+      }
+    }
+
+    .about-us-info-block {
+
+      svg{
+        fill: white;
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .phone{
+        svg{
+          stroke: white;
+        }
+
+        &:hover{
+          svg{
+            stroke: #50df9f;
+          }
+        }
+      }
+
+      .phone, .address{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+
+
+        @media (max-width: $xl-bp) {
+          p{
+            display: none;
+          }
+        }
+      }
+
+      .working-hours {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      margin: 0 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+
+      @media (max-width: $xl-bp) {
+        font-size: 1.3rem;
+        gap: 2rem;
+      }
+    }
+  }
+}
