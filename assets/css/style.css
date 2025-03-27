@@ -3445,6 +3445,12 @@ a:hover svg, .hover:hover svg {
     }
 }
 
+@media (max-width: 1440px) {
+    .first-block .text-info h1 {
+        margin: 15rem 0 0 auto;
+    }
+}
+
 .first-block .text-info .description {
     font-size: 4rem;
     margin-top: 4rem;
@@ -3461,6 +3467,12 @@ a:hover svg, .hover:hover svg {
         margin: 4rem 0 0 0;
         font-size: 3rem;
         max-width: 50rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .first-block .text-info .description {
+        margin: 4rem 0 0 0;
     }
 }
 
@@ -3901,6 +3913,28 @@ a:hover svg, .hover:hover svg {
     bottom: 0;
 }
 
+.map-block {
+    height: -webkit-max-content;
+    height: max-content;
+    background-color: #222;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.map-block h2 {
+    color: #50df9f;
+    font-size: 5.5rem;
+}
+
+.map-block p {
+    font-size: 2.1rem;
+    color: #bbb;
+}
+
+.ymaps-2-1-79-gototech {
+    display: none !important;
+}
+
 header {
     background-color: rgba(1, 1, 7, 0.6);
     position: fixed;
@@ -4029,4 +4063,99 @@ header .container .about-us-info-block .working-hours {
         font-size: 1.3rem;
         gap: 2rem;
     }
+}
+
+footer .footer-content {
+    display: grid;
+    grid-template-columns: 34rem 1fr;
+    gap: 4rem;
+    color: white;
+}
+
+footer .footer-content .description-part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .footer-content .description-part .logo-title .slogan {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 7rem;
+}
+
+footer .footer-content .description-part .logo-title .slogan img {
+    position: absolute;
+    left: 58%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 5rem;
+    top: -0.4rem;
+}
+
+footer .footer-content .description-part .contacts-block, footer .footer-content .description-part .working-hours {
+    margin-top: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .footer-content .description-part .contacts-block .title, footer .footer-content .description-part .working-hours .title {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+footer .footer-content .description-part .contacts-block .description, footer .footer-content .description-part .working-hours .description {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+footer .footer-content .description-part .contacts-block .description .phones-list, footer .footer-content .description-part .working-hours .description .phones-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+footer .footer-content .description-part .contacts-block .description .messengers, footer .footer-content .description-part .working-hours .description .messengers {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer .footer-content .description-part .contacts-block .description .messengers a svg, footer .footer-content .description-part .working-hours .description .messengers a svg {
+    fill: white;
+    width: 3rem;
+    height: 3rem;
+}
+
+footer .footer-content .map-part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer .footer-content .map-part .ymaps-2-1-79-map {
+    width: 100% !important;
 }
