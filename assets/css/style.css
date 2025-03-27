@@ -3361,6 +3361,17 @@ a:hover svg, .hover:hover svg {
     fill: #50df9f !important;
 }
 
+h2 {
+    font-size: 5.5rem;
+    color: #50df9f;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
 .container {
     width: 100%;
     padding-right: 24rem;
@@ -3600,6 +3611,7 @@ a:hover svg, .hover:hover svg {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
 }
 
 .second-block .container {
@@ -3794,23 +3806,25 @@ a:hover svg, .hover:hover svg {
 
 .third-block {
     padding: 8rem 0;
-    background-image: url("/assets/images/pl.jpg");
     background-repeat: repeat-x;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
   /* Общие стили */
 }
 
-.third-block h2 {
-    font-size: 5.5rem;
-    color: #50df9f;
-}
-
-@media (max-width: 1024px) {
-    .third-block h2 {
-        font-size: 3rem;
-    }
+.third-block .third-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .third-block .services-list {
@@ -3916,14 +3930,8 @@ a:hover svg, .hover:hover svg {
 .map-block {
     height: -webkit-max-content;
     height: max-content;
-    background-color: #222;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-}
-
-.map-block h2 {
-    color: #50df9f;
-    font-size: 5.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .map-block p {
@@ -3933,6 +3941,62 @@ a:hover svg, .hover:hover svg {
 
 .ymaps-2-1-79-gototech {
     display: none !important;
+}
+
+.fourth_block {
+    background-color: #222222;
+    color: white;
+    padding: 8rem 0;
+}
+
+.fourth_block .description {
+    margin-top: 2rem;
+    font-size: 2.1rem;
+    color: #bbb;
+}
+
+.fourth_block .advantages-list {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.fourth_block .advantages-list .advantages-item {
+    max-width: 49rem;
+    padding-left: 22px;
+    position: relative;
+}
+
+.fourth_block .advantages-list .advantages-item:after {
+    content: "";
+    background-color: #bbbbbb;
+    height: 100%;
+    width: 0.3rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.fourth_block .advantages-list .advantages-item__title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 111.5%;
+    height: 7.3rem;
+}
+
+.fourth_block .advantages-list .advantages__item__description {
+    font-size: 2.4rem;
+    line-height: 111.5%;
+    height: 13.5rem;
+    margin-top: 5.3rem;
+}
+
+.fourth_block .advantages-list .advantages-item-counter {
+    font-size: 6rem;
+    text-align: right;
+    margin-top: 5.3rem;
+    line-height: 111.5%;
 }
 
 header {
@@ -4063,6 +4127,23 @@ header .container .about-us-info-block .working-hours {
         font-size: 1.3rem;
         gap: 2rem;
     }
+}
+
+footer {
+    position: relative;
+}
+
+footer .footer-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 footer .footer-content {

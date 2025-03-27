@@ -1,4 +1,17 @@
 footer {
+  position: relative;
+
+  .footer-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .footer-content{
     display: grid;
     grid-template-columns: 34rem 1fr;

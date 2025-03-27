@@ -52,6 +52,16 @@ a, .hover {
   }
 }
 
+h2 {
+  font-size: 5.5rem;
+  color: #50df9f;
+
+  @media (max-width: $xl-bp) {
+    font-size: 3rem;
+  }
+}
+
+
 .container {
   width: 100%;
   padding-right: 24rem;
@@ -109,7 +119,7 @@ a, .hover {
       width: 80rem;
       text-align: right;
       margin-right: 11rem;
-      
+
       @media (max-width: $xl-bp) {
         margin: 15rem 0 0 auto;
         font-size: 4rem;
@@ -259,6 +269,7 @@ a, .hover {
   color: white;
   padding: 8rem 0;
   user-select: none;
+  position: relative;
 
   .container {
     display: flex;
@@ -412,22 +423,24 @@ a, .hover {
 
 .third-block {
   padding: 8rem 0;
-  background-image: url('/assets/images/pl.jpg');
   background-repeat: repeat-x;
   user-select: none;
+  position: relative;
 
-  h2 {
-    font-size: 5.5rem;
-    color: #50df9f;
-
-    @media (max-width: $xl-bp) {
-      font-size: 3rem;
-    }
+  .third-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(0.3);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   /* Общие стили */
   .services-list {
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
     margin: 10rem 0 4rem 0;
     display: grid;
     gap: 4rem;
@@ -445,7 +458,7 @@ a, .hover {
     color: white;
     width: 30rem;
     background-color: #222222;
-    box-shadow: 0.1rem 0.1rem 2.9rem 0.1rem rgba(0,0,0,0.45);
+    box-shadow: 0.1rem 0.1rem 2.9rem 0.1rem rgba(0, 0, 0, 0.45);
     position: relative;
     border-radius: 0.8rem;
     overflow: hidden;
@@ -454,7 +467,7 @@ a, .hover {
       width: 100%;
     }
 
-    .description{
+    .description {
       color: #bbbbbb;
       margin-top: 2rem;
     }
@@ -520,25 +533,76 @@ a, .hover {
 
 }
 
-.map-block{
+.map-block {
   height: max-content;
-  background-color: #222;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-  h2{
-    color: #50df9f;
-    font-size: 5.5rem;
-  }
-
-  p{
+  p {
     font-size: 2.1rem;
     color: #bbb;
   }
 }
 
-.ymaps-2-1-79-gototech{
-  display: none!important;
+.ymaps-2-1-79-gototech {
+  display: none !important;
+}
+
+.fourth_block {
+  background-color: #222222;
+  color: white;
+  padding: 8rem 0;
+
+  .description{
+    margin-top: 2rem;
+    font-size: 2.1rem;
+    color: #bbb;
+  }
+
+  .advantages-list {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+
+    .advantages-item{
+      max-width: 49rem;
+      padding-left: 22px;
+      position: relative;
+
+      &:after{
+        content: "";
+        background-color: #bbbbbb;
+        height: 100%;
+        width: 0.3rem;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+    }
+
+    .advantages-item__title{
+      font-size: 3.2rem;
+      font-weight: 600;
+      line-height: 111.5%;
+      height: 7.3rem;
+    }
+
+    .advantages__item__description{
+      font-size: 2.4rem;
+      line-height: 111.5%;
+      height: 13.5rem;
+      margin-top: 5.3rem;
+    }
+
+    .advantages-item-counter{
+      font-size: 6rem;
+      text-align: right;
+      margin-top: 5.3rem;
+      line-height: 111.5%;
+    }
+  }
+
 }
 
 @import './blocks/header.scss';
