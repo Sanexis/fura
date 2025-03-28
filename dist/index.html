@@ -379,13 +379,13 @@
       </div>
     </div>  </main>
   <footer class="map-block container">
-    <img class="footer-bg" src="./assets/images/pl.jpg" alt="logo">
+    <img class="footer-bg" src="./assets/images/pl.jpg" loading="lazy" alt="logo">
     <!--  <p>Мы находимя по адресу <a href="" target="_blank">Витебск, ул. Гагарина 68</a></p>-->
     <div class="footer-content">
       <div class="description-part">
         <div class="logo-title">
           <div class="slogan">
-            <img src="./assets/images/logo.png" alt="logo">
+            <img loading="lazy" src="./assets/images/logo.png" alt="logo">
             <span>
               Лучшие
             </span>
@@ -456,9 +456,8 @@
         size: 'small',
       });
   
-      // Используем стандартную метку
       let yandexMapPlaceMark = new ymaps.Placemark([55.214291, 30.230393], {}, {
-        preset: 'islands#blackIcon' // Это стандартная серая метка с грузовиком
+        preset: 'islands#blackIcon'
       });
   
       yandexMap.geoObjects.add(yandexMapPlaceMark);

@@ -18,6 +18,15 @@ footer {
     gap: 4rem;
     color: white;
 
+    @media (max-width: 666px) {
+      display: flex;
+      flex-direction: column;
+
+      #yandex-map-element, .ymaps-2-1-79-map{
+        height: 20rem!important;
+      }
+    }
+
     .description-part{
       display: flex;
       flex-direction: column;
@@ -31,12 +40,21 @@ footer {
           display: flex;
           gap: 7rem;
 
+          @media (max-width: $sm-bp) {
+            font-size: 3rem;
+          }
+
           img{
             position: absolute;
             left: 58%;
             transform: translateX(-50%);
             width: 5rem;
             top: -0.4rem;
+
+            @media (max-width: $sm-bp) {
+              top: -0.3rem;
+              width: 4rem;
+            }
           }
         }
       }
