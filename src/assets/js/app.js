@@ -17,26 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Функция для проверки, что элемент находится в области видимости
-  function isElementInViewport(el) {
+  function isElementPartiallyInViewport(el) {
     const rect = el.getBoundingClientRect();
-    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    // Проверяем, пересекается ли элемент с viewport
+    const vertInView = (rect.top <= windowHeight) && (rect.top + rect.height >= 0);
+    const horInView = (rect.left <= windowWidth) && (rect.left + rect.width >= 0);
+
+    return vertInView && horInView;
   }
 
-  // Получаем все блоки
   const serviceItems = document.querySelectorAll(".service-item");
-
-  // Объект для отслеживания, какие анимации уже были запущены
   const animatedItems = {};
 
-  // Функция для запуска анимации на каждом блоке с задержкой
   function startAnimationsSequentially(items) {
     items.forEach((item, index) => {
-      // Проверяем, была ли анимация уже выполнена для этого элемента
       if (!animatedItems[index]) {
         animatedItems[index] = true;
 
-        // Запускаем анимацию с задержкой, пропорциональной индексу элемента
         setTimeout(() => {
           const fill = item.querySelector(".fill");
           const bulb = item.querySelector(".bulb");
@@ -44,21 +44,24 @@ document.addEventListener('DOMContentLoaded', function () {
           fill.style.width = "100%";
           setTimeout(() => {
             bulb.style.backgroundColor = "#50df9f";
-            bulb.style.boxShadow = "0 0 10px 3px #50df9f"; // Добавляем тень
+            bulb.style.boxShadow = "0 0 10px 3px #50df9f";
           }, 2000);
-        }, index * 500); // Задержка 500мс между анимациями (можно регулировать)
+        }, index * 500);
       }
     });
   }
 
   window.addEventListener("scroll", function () {
-    // Проверяем, виден ли родительский блок (third-block)
     const thirdBlock = document.querySelector(".third-block");
-    if (isElementInViewport(thirdBlock)) {
-      // Запускаем последовательные анимации для всех элементов внутри third-block
+    if (isElementPartiallyInViewport(thirdBlock)) {
       const itemsInThirdBlock = thirdBlock.querySelectorAll(".service-item");
       startAnimationsSequentially(itemsInThirdBlock);
     }
   });
 
+  const thirdBlock = document.querySelector(".third-block");
+  if (isElementPartiallyInViewport(thirdBlock)) {
+    const itemsInThirdBlock = thirdBlock.querySelectorAll(".service-item");
+    startAnimationsSequentially(itemsInThirdBlock);
+  }
 });

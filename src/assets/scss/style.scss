@@ -59,8 +59,11 @@ h2 {
   @media (max-width: $xl-bp) {
     font-size: 3rem;
   }
-}
 
+  @include breakpoint($sm-bp) {
+    font-size: 2.2rem !important;
+  }
+}
 
 .container {
   width: 100%;
@@ -92,11 +95,19 @@ h2 {
     padding-bottom: 8rem;
   }
 
+  @media (max-width: $sm-bp) {
+    padding-bottom: 4rem;
+  }
+
   img {
     width: 100%;
     position: absolute;
     z-index: -1;
     filter: brightness(0.8);
+
+    @media (max-width: $sm-bp) {
+      filter: brightness(0.6);
+    }
   }
 
   .container {
@@ -130,6 +141,11 @@ h2 {
         margin: 15rem 0 0 auto;
       }
 
+      @media (max-width: $sm-bp) {
+        margin: 11rem 0 0 auto;
+        font-size: 4rem;
+        max-width: 35rem;
+      }
     }
 
     .description {
@@ -150,6 +166,10 @@ h2 {
 
       @media (max-width: $cos_bp) {
         margin: 4rem 0 0 0;
+      }
+
+      @media (max-width: $sm-bp) {
+        font-size: 2.1rem;
       }
     }
   }
@@ -175,6 +195,10 @@ h2 {
     border-radius: 1.2rem;
     font-size: 2rem;
     color: white;
+
+    @media (max-width: $sm-bp) {
+      width: 80%;
+    }
 
     .modal-header {
       color: white;
@@ -272,6 +296,10 @@ h2 {
   position: relative;
   box-shadow: 0.4rem -3rem 2.2rem 0.4rem rgba(0, 0, 0, 0.5) inset;
 
+  @media (max-width: $sm-bp) {
+    padding: 4rem 0;
+  }
+
   .container {
     display: flex;
     gap: 2rem;
@@ -314,6 +342,10 @@ h2 {
       margin-top: 2rem;
       font-size: 2.1rem;
       color: #bbbbbb;
+
+      @media (max-width: $sm-bp) {
+        font-size: 1.8rem;
+      }
     }
 
     ul {
@@ -327,11 +359,20 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      @media (max-width: $sm-bp) {
+        display: flex;
+        flex-direction: column;
+      }
+
       li {
         font-size: 3rem;
         position: relative;
         padding-left: 2rem;
         font-weight: 500;
+
+        @media (max-width: $sm-bp) {
+          font-size: 2rem;
+        }
 
         &:after {
           position: absolute;
@@ -355,6 +396,10 @@ h2 {
     margin: 0 auto;
     overflow: hidden;
     mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 90%, transparent);
+
+    @media (max-width: $sm-bp) {
+      max-width: 37rem;
+    }
   }
 
   .scroll-track {
@@ -420,6 +465,7 @@ h2 {
       animation-duration: 40s;
     }
   }
+
 }
 
 .third-block {
@@ -428,7 +474,11 @@ h2 {
   user-select: none;
   position: relative;
 
-  .third-bg{
+  @media (max-width: $sm-bp) {
+    padding: 4rem 0;
+  }
+
+  .third-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -451,6 +501,12 @@ h2 {
     @media (max-width: $xl-bp) {
       grid-template-columns: repeat(2, 1fr);
       margin: 6rem 0 4rem 0;
+    }
+
+    @media (max-width: $sm-bp) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 
@@ -491,6 +547,10 @@ h2 {
   .description {
     margin-bottom: 1rem;
     font-size: 1.6rem;
+
+    @media (max-width: $sm-bp) {
+      display: none;
+    }
   }
 
   .light {
@@ -556,6 +616,10 @@ h2 {
   box-shadow: 0.4rem 3rem 2.2rem .4rem rgba(0, 0, 0, 0.55) inset;
   position: relative;
 
+  @media (max-width: $sm-bp) {
+    padding: 4rem 0;
+  }
+
   &:after {
     position: absolute;
     content: '';
@@ -565,7 +629,7 @@ h2 {
     box-shadow: 0.4rem -3rem 2.2rem 0.4rem rgba(0, 0, 0, 0.45) inset;
   }
 
-  .description{
+  .description {
     margin-top: 2rem;
     font-size: 2.1rem;
     color: #bbb;
@@ -588,12 +652,12 @@ h2 {
       row-gap: 3.2rem;
     }
 
-    .advantages-item{
+    .advantages-item {
       max-width: 49rem;
       padding-left: 22px;
       position: relative;
 
-      &:after{
+      &:after {
         content: "";
         background-color: #bbbbbb;
         height: 100%;
@@ -604,7 +668,7 @@ h2 {
       }
     }
 
-    .advantages-item__title{
+    .advantages-item__title {
       font-size: 3.2rem;
       font-weight: 600;
       line-height: 111.5%;
@@ -620,7 +684,7 @@ h2 {
       }
     }
 
-    .advantages__item__description{
+    .advantages__item__description {
       font-size: 2.4rem;
       line-height: 111.5%;
       height: 13.5rem;
@@ -637,7 +701,7 @@ h2 {
       }
     }
 
-    .advantages-item-counter{
+    .advantages-item-counter {
       font-size: 6rem;
       text-align: right;
       margin-top: 5.3rem;
