@@ -1,40 +1,62 @@
 <footer class="map-block container">
-  <img class="footer-bg" src="./assets/images/pl.jpg" loading="lazy" alt="logo">
+  <img
+    class="footer-bg"
+    src="./assets/images/pl.jpg"
+    loading="lazy"
+    alt="Карта расположения автосервиса в Витебске"
+  />
   <!--  <p>Мы находимя по адресу <a href="" target="_blank">Витебск, ул. Гагарина 68</a></p>-->
   <div class="footer-content">
     <div class="description-part">
       <div class="logo-title">
         <div class="slogan">
-          <img loading="lazy" src="./assets/images/logo.png" alt="logo">
-          <span>
-            Лучшие
-          </span>
-          <span>
-            деле.
-          </span>
+          <!-- TODO -->
+          <img
+            loading="lazy"
+            src="./assets/images/logo.png"
+            alt="Название компании - ремонт грузовиков"
+          />
+          <span> Лучшие </span>
+          <span> деле. </span>
         </div>
       </div>
       <div class="contacts-block">
-        <div class="title">
-          Связь с нами:
-        </div>
+        <div class="title">Связь с нами:</div>
         <div class="description">
           <div class="phones-list">
-            <p class="phone"><a href="tel:375333333333">+375 (33) 333-33-33</a> <span>(МТС)</span></p>
-            <p class="phone"><a href="tel:375333333333">+375 (33) 333-33-33</a> <span>(А1)</span></p>
+            <p class="phone">
+              <a href="tel:375333333333">+375 (33) 333-33-33</a>
+              <span>(МТС)</span>
+            </p>
+            <p class="phone">
+              <a href="tel:375333333333">+375 (33) 333-33-33</a>
+              <span>(А1)</span>
+            </p>
           </div>
           <div class="messengers">
-            <a href="https://t.me/+375333333333" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://t.me/+375333333333"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg class="telegram">
                 <use xlink:href="assets/images/sprite.svg#telegram"></use>
               </svg>
             </a>
-            <a href="https://wa.me/375333333333" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/375333333333"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg class="whatsapp">
                 <use xlink:href="assets/images/sprite.svg#whatsapp"></use>
               </svg>
             </a>
-            <a href="viber://chat?number=+375333333333" target="_blank" rel="noopener noreferrer">
+            <a
+              href="viber://chat?number=+375333333333"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg>
                 <use xlink:href="assets/images/sprite.svg#viber"></use>
               </svg>
@@ -43,9 +65,7 @@
         </div>
       </div>
       <div class="working-hours">
-        <div class="title">
-          График работы
-        </div>
+        <div class="title">График работы</div>
         <div class="description">
           <p>7:00 - 24:00</p>
           <p>Без выходных</p>
@@ -53,14 +73,15 @@
       </div>
     </div>
     <div class="map-part">
-      <div id="yandex-map-element" style="width: 100%; height: 300px;"></div>
+      <div id="yandex-map-element" style="width: 100%; height: 300px"></div>
     </div>
   </div>
-
 </footer>
 
-
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script
+  src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+  type="text/javascript"
+></script>
 
 <script type="text/javascript">
   ymaps.ready(init);
@@ -72,13 +93,17 @@
       controls: [],
     });
 
-    yandexMap.controls.add('zoomControl', {
-      size: 'small',
+    yandexMap.controls.add("zoomControl", {
+      size: "small",
     });
 
-    let yandexMapPlaceMark = new ymaps.Placemark([55.214291, 30.230393], {}, {
-      preset: 'islands#blackIcon'
-    });
+    let yandexMapPlaceMark = new ymaps.Placemark(
+      [55.214291, 30.230393],
+      {},
+      {
+        preset: "islands#blackIcon",
+      }
+    );
 
     yandexMap.geoObjects.add(yandexMapPlaceMark);
     let fullscreenControl = new ymaps.control.FullscreenControl();
