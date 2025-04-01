@@ -3348,6 +3348,41 @@ body .main-background-image {
     -o-object-fit: cover;
     object-fit: cover;
     height: 100%;
+    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8);
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333;
+    opacity: 1;
+}
+
+#scrollToTopBtn::after {
+    content: "↑";
+    display: block;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 2.4rem;
 }
 
 a:hover, .hover:hover {
@@ -3408,6 +3443,9 @@ h2 {
 .first-block {
     position: relative;
     height: 100dvh;
+    padding-bottom: 4rem;
+    min-height: -webkit-max-content;
+    min-height: max-content;
 }
 
 @media (max-width: 1024px) {
@@ -4159,6 +4197,70 @@ h2 {
     .fourth_block .advantages-list .advantages-item-counter {
         margin-top: 3rem;
     }
+}
+
+.services {
+    padding-top: 13rem;
+    padding-bottom: 8rem;
+    background-color: #222222;
+}
+
+.services h1 {
+    color: #50df9f;
+    font-size: 7.2rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .services h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .services h1 {
+        font-size: 4rem;
+    }
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    color: white;
+    margin-top: 1.5rem;
+    letter-spacing: 0.06rem;
+    font-weight: 500;
+}
+
+.services .more {
+    color: #50df9f;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+.services .services-list {
+    margin-top: 4rem;
+}
+
+.services .services-list p {
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    color: #bbbbbb;
+}
+
+.services .other-offers {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.services .other-offers .service-item {
+    position: relative;
+}
+
+.services .other-offers p {
+    color: #222222;
+    position: absolute;
 }
 
 header {

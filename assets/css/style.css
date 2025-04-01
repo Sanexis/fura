@@ -4199,6 +4199,70 @@ h2 {
     }
 }
 
+.services {
+    padding-top: 13rem;
+    padding-bottom: 8rem;
+    background-color: #222222;
+}
+
+.services h1 {
+    color: #50df9f;
+    font-size: 7.2rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .services h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .services h1 {
+        font-size: 4rem;
+    }
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    color: white;
+    margin-top: 1.5rem;
+    letter-spacing: 0.06rem;
+    font-weight: 500;
+}
+
+.services .more {
+    color: #50df9f;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+.services .services-list {
+    margin-top: 4rem;
+}
+
+.services .services-list p {
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    color: #bbbbbb;
+}
+
+.services .other-offers {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.services .other-offers .service-item {
+    position: relative;
+}
+
+.services .other-offers p {
+    color: #222222;
+    position: absolute;
+}
+
 header {
     background-color: rgba(1, 1, 7, 0.6);
     position: fixed;
