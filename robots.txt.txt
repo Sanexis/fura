@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Host: https://v-truck-service.by
+Sitemap: https://v-truck-service.by/sitemap.xml
