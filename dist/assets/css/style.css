@@ -3466,8 +3466,8 @@ h2 {
     width: 100%;
     position: absolute;
     z-index: -1;
-    -webkit-filter: brightness(0.8);
-    filter: brightness(0.8);
+    -webkit-filter: brightness(0.65);
+    filter: brightness(0.65);
 }
 
 @media (max-width: 500px) {
@@ -4264,7 +4264,7 @@ h2 {
 }
 
 header {
-    background-color: rgba(1, 1, 7, 0.6);
+    background-color: rgba(1, 1, 7, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -4328,12 +4328,6 @@ header .container .navigation ul {
     gap: 4rem;
 }
 
-@media (max-width: 500px) {
-    header .container .navigation {
-        display: none;
-    }
-}
-
 header .container .about-us-info-block {
     margin: 0 0 0 auto;
     display: -ms-flexbox;
@@ -4349,6 +4343,13 @@ header .container .about-us-info-block svg {
     fill: white;
     height: 2rem;
     width: 2rem;
+}
+
+@media (max-width: 500px) {
+    header .container .about-us-info-block svg {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 }
 
 header .container .about-us-info-block .phone svg {
@@ -4369,8 +4370,8 @@ header .container .about-us-info-block .phone, header .container .about-us-info-
     gap: 0.8rem;
 }
 
-@media (max-width: 1024px) {
-    header .container .about-us-info-block .phone p, header .container .about-us-info-block .address p {
+@media (max-width: 500px) {
+    header .container .about-us-info-block .phone span, header .container .about-us-info-block .address span {
         display: none;
     }
 }
@@ -4384,6 +4385,12 @@ header .container .about-us-info-block .working-hours {
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 500px) {
+    header .container .about-us-info-block .working-hours {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {

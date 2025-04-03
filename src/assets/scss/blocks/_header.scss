@@ -1,5 +1,5 @@
 header {
-  background-color: rgba(1, 1, 7, 0.6);
+  background-color: rgba(1, 1, 7, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -47,10 +47,6 @@ header {
         display: flex;
         gap: 4rem;
       }
-
-      @media (max-width: $sm-bp) {
-        display: none;
-      }
     }
 
     .about-us-info-block {
@@ -59,6 +55,11 @@ header {
         fill: white;
         height: 2rem;
         width: 2rem;
+
+        @media (max-width: $sm-bp) {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
       }
 
       .phone{
@@ -80,8 +81,8 @@ header {
         gap: .8rem;
 
 
-        @media (max-width: $xl-bp) {
-          p{
+        @media (max-width: $sm-bp) {
+          span{
             display: none;
           }
         }
@@ -92,6 +93,10 @@ header {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: $sm-bp) {
+          display: none;
+        }
       }
 
       margin: 0 0 0 auto;
