@@ -3538,6 +3538,23 @@ h2 {
     font-weight: 500;
 }
 
+.first-block .text-info .description h3 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .first-block .text-info .description h3 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .first-block .text-info .description h3 {
+        font-size: 2.1rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .first-block .text-info .description {
         margin: 4rem 0 0 0;
@@ -3743,14 +3760,14 @@ h2 {
     }
 }
 
-.second-block .description p {
+.second-block .description .text {
     margin-top: 2rem;
     font-size: 2.1rem;
     color: #bbbbbb;
 }
 
 @media (max-width: 500px) {
-    .second-block .description p {
+    .second-block .description .text {
         font-size: 1.8rem;
     }
 }
@@ -4422,6 +4439,8 @@ footer .footer-content {
     grid-template-columns: 34rem 1fr;
     gap: 4rem;
     color: white;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 @media (max-width: 666px) {

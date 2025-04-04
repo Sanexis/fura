@@ -17,6 +17,7 @@ footer {
     grid-template-columns: 34rem 1fr;
     gap: 4rem;
     color: white;
+    align-items: center;
 
     @media (max-width: 666px) {
       display: flex;
