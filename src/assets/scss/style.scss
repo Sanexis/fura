@@ -387,10 +387,11 @@ h2 {
   }
 
   .description {
-    .text {
+    .text, p {
       margin-top: 2rem;
       font-size: 2.1rem;
       color: #bbbbbb;
+      font-weight: 400;
 
       @media (max-width: $sm-bp) {
         font-size: 1.8rem;
